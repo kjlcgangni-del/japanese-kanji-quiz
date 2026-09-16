@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese Kanji Quiz - Lesson 19 & 20</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: #e9eef5;
+        font-family: "Noto Sans Bengali", Arial, sans-serif;
+        color: #222;
+    }
+
+    .paper {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 20px auto;
+        background: white;
+        padding: 16mm;
+        box-shadow: 0 0 15px rgba(0,0,0,.15);
+    }
+
+    .header {
+        text-align: center;
+        border: 2px solid #222;
+        padding: 14px;
+        margin-bottom: 15px;
+    }
+
+    .header h1 {
+        margin: 0 0 5px;
+        font-size: 25px;
+    }
+
+    .header h2 {
+        margin: 0;
+        font-size: 19px;
+        font-family: "Noto Sans JP", sans-serif;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 25px;
+        border: 1px solid #444;
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .info div {
+        border-bottom: 1px dotted #555;
+        padding: 5px;
+    }
+
+    .instructions {
+        background: #f3f6fa;
+        border-left: 4px solid #2563eb;
+        padding: 10px 14px;
+        margin-bottom: 18px;
+    }
+
+    .instructions strong {
+        color: #174ea6;
+    }
+
+    .section-title {
+        background: #1e3a8a;
+        color: white;
+        padding: 8px 12px;
+        margin: 20px 0 12px;
+        font-size: 18px;
+        border-radius: 4px;
+    }
+
+    .question {
+        margin-bottom: 16px;
+        page-break-inside: avoid;
+    }
+
+    .q-text {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 7px;
+    }
+
+    .jp {
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 19px;
+    }
+
+    .options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 20px;
+        padding-left: 15px;
+    }
+
+    .option {
+        padding: 5px 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: "Noto Sans Bengali", "Noto Sans JP", sans-serif;
+    }
+
+    .option:hover {
+        background: #eef5ff;
+    }
+
+    .answer-box {
+        display: none;
+        margin-top: 5px;
+        color: green;
+        font-weight: bold;
+    }
+
+    .controls {
+        text-align: center;
+        margin: 20px auto;
+        max-width: 210mm;
+    }
+
+    button {
+        border: none;
+        background: #2563eb;
+        color: white;
+        padding: 11px 20px;
+        margin: 5px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    button:hover {
+        background: #1d4ed8;
+    }
+
+    #result {
+        display: none;
+        background: #dcfce7;
+        border: 2px solid #16a34a;
+        padding: 15px;
+        margin: 15px 0;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .footer {
+        margin-top: 30px;
+        padding-top: 10px;
+        border-top: 1px solid #aaa;
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+    }
+
+    @media print {
+        body {
+            background: white;
+        }
+
+        .paper {
+            width: 100%;
+            min-height: auto;
+            margin: 0;
+            padding: 10mm;
+            box-shadow: none;
+        }
+
+        .controls {
+            display: none;
+        }
+
+        .answer-box {
+            display: none !important;
+        }
+
+        .question {
+            page-break-inside: avoid;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="paper">
+
+    <div class="header">
+        <h1>日本語 漢字 QUIZ</h1>
+        <h2>Minna no Nihongo — Lesson 19 & 20</h2>
+        <p>Kanji Practice Test</p>
+    </div>
+
+    <div class="info">
+        <div>শিক্ষার্থীর নাম: __________________________</div>
+        <div>রোল: __________________</div>
+        <div>তারিখ: _________________________________</div>
+        <div>সময়: 30 মিনিট</div>
+    </div>
+
+    <div class="instructions">
+        <strong>নির্দেশনা:</strong><br>
+        সঠিক উত্তরটি নির্বাচন করুন। প্রতিটি প্রশ্নের মান 1।
+        মোট প্রশ্ন: <strong>40</strong> | পূর্ণমান: <strong>40</strong>
+    </div>
+
+    <div class="section-title">
+        Part A — Kanji Reading
+    </div>
+
+    <!-- Q1 -->
+    <div class="question">
+        <div class="q-text">1. 「去年」 এর সঠিক reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. きょねん</div>
+            <div class="option">B. らいねん</div>
+            <div class="option">C. ことし</div>
+            <div class="option">D. まいとし</div>
+        </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question">
+        <div class="q-text">2. 「今年」 এর সঠিক reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. きょねん</div>
+            <div class="option">B. ことし</div>
+            <div class="option">C. らいねん</div>
+            <div class="option">D. まいげつ</div>
+        </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question">
+        <div class="q-text">3. 「来年」 এর সঠিক reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. ことし</div>
+            <div class="option">B. きょねん</div>
+            <div class="option">C. らいねん</div>
+            <div class="option">D. まいとし</div>
+        </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+        <div class="q-text">4. 「毎年」 এর সঠিক reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. まいとし</div>
+            <div class="option">B. ことし</div>
+            <div class="option">C. きょねん</div>
+            <div class="option">D. らいねん</div>
+        </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question">
+        <div class="q-text">5. 「休みます」 এর reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. あそびます</div>
+            <div class="option">B. やすみます</div>
+            <div class="option">C. はたらきます</div>
+            <div class="option">D. およぎます</div>
+        </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question">
+        <div class="q-text">6. 「遊びます」 এর reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. やすみます</div>
+            <div class="option">B. あそびます</div>
+            <div class="option">C. すみます</div>
+            <div class="option">D. よみます</div>
+        </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question">
+        <div class="q-text">7. 「泳ぎます」 এর reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. およぎます</div>
+            <div class="option">B. はしります</div>
+            <div class="option">C. あそびます</div>
+            <div class="option">D. あるきます</div>
+        </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="question">
+        <div class="q-text">8. 「働きます」 এর reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. はたらきます</div>
+            <div class="option">B. やすみます</div>
+            <div class="option">C. うごきます</div>
+            <div class="option">D. つかいます</div>
+        </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="question">
+        <div class="q-text">9. 「住みます」 এর reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. しります</div>
+            <div class="option">B. すみます</div>
+            <div class="option">C. よみます</div>
+            <div class="option">D. かえります</div>
+        </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="question">
+        <div class="q-text">10. 「知ります」 এর reading কোনটি?</div>
+        <div class="options">
+            <div class="option">A. しります</div>
+            <div class="option">B. すみます</div>
+            <div class="option">C. ききます</div>
+            <div class="option">D. みます</div>
+        </div>
+    </div>
+
+    <div class="section-title">
+        Part B — Meaning
+    </div>
+
+    <div class="question">
+        <div class="q-text">11. 「食べます」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. পান করা</div>
+            <div class="option">B. খাওয়া</div>
+            <div class="option">C. পড়া</div>
+            <div class="option">D. দেখা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">12. 「飲みます」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. খাওয়া</div>
+            <div class="option">B. কেনা</div>
+            <div class="option">C. পান করা</div>
+            <div class="option">D. তৈরি করা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">13. 「読みます」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. পড়া</div>
+            <div class="option">B. লেখা</div>
+            <div class="option">C. শোনা</div>
+            <div class="option">D. বলা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">14. 「見ます」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. দেখা</div>
+            <div class="option">B. শোনা</div>
+            <div class="option">C. পড়া</div>
+            <div class="option">D. যাওয়া</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">15. 「聞きます」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. দেখা</div>
+            <div class="option">B. শোনা / জিজ্ঞেস করা</div>
+            <div class="option">C. কেনা</div>
+            <div class="option">D. বসবাস করা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">16. 「買います」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. বিক্রি করা</div>
+            <div class="option">B. কেনা</div>
+            <div class="option">C. তৈরি করা</div>
+            <div class="option">D. ব্যবহার করা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">17. 「帰ります」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. ফিরে যাওয়া</div>
+            <div class="option">B. আসা</div>
+            <div class="option">C. দাঁড়ানো</div>
+            <div class="option">D. বসা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">18. 「作ります」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. কাটা</div>
+            <div class="option">B. তৈরি করা</div>
+            <div class="option">C. খাওয়া</div>
+            <div class="option">D. পড়া</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">19. 「使います」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. ব্যবহার করা</div>
+            <div class="option">B. তৈরি করা</div>
+            <div class="option">C. জানা</div>
+            <div class="option">D. কাজ করা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">20. 「住みます」 এর অর্থ কী?</div>
+        <div class="options">
+            <div class="option">A. বসবাস করা</div>
+            <div class="option">B. বিশ্রাম নেওয়া</div>
+            <div class="option">C. সাঁতার কাটা</div>
+            <div class="option">D. খেলা করা</div>
+        </div>
+    </div>
+
+    <div class="section-title">
+        Part C — Choose the Correct Kanji
+    </div>
+
+    <div class="question">
+        <div class="q-text">21. 「やすみます」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 休みます</div>
+            <div class="option jp">B. 住みます</div>
+            <div class="option jp">C. 読みます</div>
+            <div class="option jp">D. 飲みます</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">22. 「あそびます」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 泳ぎます</div>
+            <div class="option jp">B. 遊びます</div>
+            <div class="option jp">C. 働きます</div>
+            <div class="option jp">D. 帰ります</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">23. 「およぎます」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 泳ぎます</div>
+            <div class="option jp">B. 遊びます</div>
+            <div class="option jp">C. 休みます</div>
+            <div class="option jp">D. 作ります</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">24. 「はたらきます」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 動きます</div>
+            <div class="option jp">B. 働きます</div>
+            <div class="option jp">C. 住みます</div>
+            <div class="option jp">D. 使います</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">25. 「しります」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 知ります</div>
+            <div class="option jp">B. 作ります</div>
+            <div class="option jp">C. 読みます</div>
+            <div class="option jp">D. 帰ります</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">26. 「つかいます」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 作います</div>
+            <div class="option jp">B. 使います</div>
+            <div class="option jp">C. 知ります</div>
+            <div class="option jp">D. 住みます</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">27. 「つくります」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 作ります</div>
+            <div class="option jp">B. 使います</div>
+            <div class="option jp">C. 買います</div>
+            <div class="option jp">D. 聞きます</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">28. 「かえります」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 帰ります</div>
+            <div class="option jp">B. 買います</div>
+            <div class="option jp">C. 来ます</div>
+            <div class="option jp">D. 行きます</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">29. 「かいます」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 買います</div>
+            <div class="option jp">B. 帰ります</div>
+            <div class="option jp">C. 聞きます</div>
+            <div class="option jp">D. 書きます</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">30. 「のみます」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 読みます</div>
+            <div class="option jp">B. 飲みます</div>
+            <div class="option jp">C. 住みます</div>
+            <div class="option jp">D. 休みます</div>
+        </div>
+    </div>
+
+    <div class="section-title">
+        Part D — Mixed Kanji Challenge
+    </div>
+
+    <div class="question">
+        <div class="q-text">31. 「まいにち」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 毎日</div>
+            <div class="option jp">B. 毎年</div>
+            <div class="option jp">C. 今日</div>
+            <div class="option jp">D. 来日</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">32. 「きょねん」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 今年</div>
+            <div class="option jp">B. 去年</div>
+            <div class="option jp">C. 来年</div>
+            <div class="option jp">D. 毎年</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">33. 「らいねん」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 去年</div>
+            <div class="option jp">B. 今年</div>
+            <div class="option jp">C. 来年</div>
+            <div class="option jp">D. 毎年</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">34. 「ことし」 এর সঠিক Kanji কোনটি?</div>
+        <div class="options">
+            <div class="option jp">A. 去年</div>
+            <div class="option jp">B. 来年</div>
+            <div class="option jp">C. 毎年</div>
+            <div class="option jp">D. 今年</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">35. 「まいとし」 এর অর্থ কোনটি?</div>
+        <div class="options">
+            <div class="option">A. প্রতি বছর</div>
+            <div class="option">B. এই বছর</div>
+            <div class="option">C. গত বছর</div>
+            <div class="option">D. আগামী বছর</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">36. 「働きます」 কোন অর্থ প্রকাশ করে?</div>
+        <div class="options">
+            <div class="option">A. বিশ্রাম নেওয়া</div>
+            <div class="option">B. কাজ করা</div>
+            <div class="option">C. খেলা করা</div>
+            <div class="option">D. বসবাস করা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">37. 「遊びます」 কোন অর্থ প্রকাশ করে?</div>
+        <div class="options">
+            <div class="option">A. সাঁতার কাটা</div>
+            <div class="option">B. কাজ করা</div>
+            <div class="option">C. খেলা / আনন্দ করা</div>
+            <div class="option">D. ফিরে যাওয়া</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">38. 「泳ぎます」 কোন অর্থ প্রকাশ করে?</div>
+        <div class="options">
+            <div class="option">A. সাঁতার কাটা</div>
+            <div class="option">B. দৌড়ানো</div>
+            <div class="option">C. হাঁটা</div>
+            <div class="option">D. খেলা করা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">39. 「知ります」 কোন অর্থ প্রকাশ করে?</div>
+        <div class="options">
+            <div class="option">A. জানা</div>
+            <div class="option">B. তৈরি করা</div>
+            <div class="option">C. ব্যবহার করা</div>
+            <div class="option">D. কেনা</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-text">40. 「作ります」 কোন অর্থ প্রকাশ করে?</div>
+        <div class="options">
+            <div class="option">A. ব্যবহার করা</div>
+            <div class="option">B. তৈরি করা</div>
+            <div class="option">C. বসবাস করা</div>
+            <div class="option">D. জানা</div>
+        </div>
+    </div>
+
+    <div id="result"></div>
+
+    <div class="footer">
+        Japanese Kanji Quiz • Minna no Nihongo Lesson 19 & 20
+    </div>
+
+</div>
+
+<div class="controls">
+    <button onclick="window.print()">🖨️ Print / Save PDF</button>
+    <button onclick="showAnswers()">🔑 Answer Key</button>
+    <button onclick="location.reload()">↻ Reset</button>
+</div>
+
+<script>
+function showAnswers() {
+    const answers = [
+        "A","B","C","A","B","B","A","A","B","A",
+        "B","C","A","A","B","B","A","B","A","A",
+        "A","B","A","B","A","B","A","A","A","B",
+        "A","B","C","D","A","B","C","A","A","B"
+    ];
+
+    let html = "<h3>Answer Key</h3>";
+
+    for (let i = 0; i < answers.length; i++) {
+        html += (i + 1) + ". " + answers[i] + " &nbsp;&nbsp;";
+        if ((i + 1) % 5 === 0) html += "<br>";
+    }
+
+    const result = document.getElementById("result");
+    result.innerHTML = html;
+    result.style.display = "block";
+}
+</script>
+
+</body>
+</html>
